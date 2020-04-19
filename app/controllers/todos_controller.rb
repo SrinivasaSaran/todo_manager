@@ -8,4 +8,10 @@ class TodosController < ApplicationController
     \n\nDate-wise ordered todo,
     \n#{Todo.order(:due_date).map { |todo| todo.to_neat_look }.join("\n")}"
   end
+
+  def show
+    id = params[:id]
+    render plain: "Todo id you are looking for is #{params[:id]}
+    \n#{Todo.find(id).to_neat_look}"
+  end
 end
