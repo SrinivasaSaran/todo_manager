@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
   max-width: 500px;
   margin: 0 auto;
-  background-color: forestgreen;
+  /*background-color: forestgreen;*/
 }
 
 h1 {
@@ -11,10 +11,10 @@ h1 {
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
-  background-color: salmon;
+  /*background-color: salmon;
   border-bottom: rgb(245, 248, 41);
   border-bottom-style: double;
-  border-bottom-width: 5px;
+  border-bottom-width: 5px;*/
 }
 h2 {
   font-size: 28px;
@@ -31,24 +31,26 @@ section {
   padding-left: 10px;
   padding-bottom: 10px;
   margin-bottom: 24px;
-  margin-right: 100px;
-  border-right-width: 7px;
+  /*margin-right: 100px;
+  border-right-width: 10px;
   border-right-style: dotted;
   border-color: rgb(234, 0, 255);
-  background-color: rgb(146, 134, 134);
+  background-color: rgb(146, 134, 134);*/
 }
 
 div {
-  background-color: slateblue;
-  width: 250px;
+  /*background-color: slateblue;*/
+  font-size: 20px;
+  width: 458px;
+  height: 20px;
   margin: 005px;
   padding: 15px;
   border: 1px solid;
 }
 
-article {
+/*article {
   background-color: deeppink;
-}
+}*/
 
 /*Typography scale
 48px, 34px, 24px, 20px, 16px
