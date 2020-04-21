@@ -38,6 +38,14 @@ section {
   background-color: rgb(146, 134, 134);
 }
 
+div {
+  background-color: slateblue;
+  width: 250px;
+  margin: 005px;
+  padding: 15px;
+  border: 1px solid;
+}
+
 article {
   background-color: deeppink;
 }
