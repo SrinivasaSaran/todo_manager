@@ -2,15 +2,13 @@ body {
   font-family: sans-serif;
   margin: 0 auto;
   max-width: 600px;
-  /*background-color: forestgreen;*/
+  background-color: forestgreen;
 }
 
-/*
 html {
   color: blue;
   background-color: brown;
 }
-*/
 
 .todopage {
   display: flex;
@@ -28,10 +26,10 @@ html {
   margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
-  /*background-color: salmon;
+  background-color: salmon;
   border-bottom: rgb(245, 248, 41);
   border-bottom-style: double;
-  border-bottom-width: 5px;*/
+  border-bottom-width: 5px;
 }
 .todosection-title {
   font-size: 28px;
@@ -50,15 +48,14 @@ html {
   margin-bottom: 24px;
   margin-left: 10px;
   max-width: 300px;
-  /*background-color: burlywood;
+  background-color: burlywood;
   margin-right: 100px;
   border-right-width: 10px;
   border-right-style: dotted;
   border-color: rgb(234, 0, 255);
-  background-color: rgb(146, 134, 134);*/
+  background-color: rgb(146, 134, 134);
 }
 
-/*
 div {
   background-color: slateblue;
   font-size: 20px;
@@ -71,7 +68,7 @@ div {
 
 article {
   background-color: deeppink;
-}*/
+}
 
 /*Typography scale
 48px, 34px, 24px, 20px, 16px
