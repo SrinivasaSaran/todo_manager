@@ -4,21 +4,116 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo Management Web App</title>
-    <link rel="stylesheet" type="text/css" href="../app/views/reset.css" />
-    <link rel="stylesheet" type="text/css" href="todo-app.css" />
+    <link rel="stylesheet" href="../app/views/reset.css" />
+    <link rel="stylesheet" href="todo-app.css" />
   </head>
+
   <body>
-    <article class="todocontent">
-      <h1 class="todopage-title">My Todo List</h1>
-      <section class="todosection">
-        <h2 class="todosection-title">Due Today</h2>
-        <p class="todosection-todo">summit saas project</p>
-        <p class="todosection-todo">call dog catcher</p>
-      </section>
-      <section class="todosection">
-        <h2 class="todosection-title">Due Tomorrrow</h2>
-        <p class="todosection-todo">Project Review</p>
-      </section>
-    </article>
+    <h1 class="todopage-title">My Todo List</h1>
+    <section class="todoinput-bar">
+      <input class="todoinput-text" type="text" placeholder="What's Next?" />
+      <input class="todoinput-text" type="date" />
+      <input class="todoinput-button" type="button" value="Add" />
+    </section>
+    <section class="todosection">
+      <div class="todosection-info">
+        <p class="todosection-title">Due Today</p>
+        <p class="todosection-completionstat">0/2</p>
+      </div>
+      <ul>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          summit saas 201 project
+          <p class="todo-overduelabel">Overdue</p>
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          call accountant
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="todosection">
+      <div class="todosection-info">
+        <p class="todosection-title">Due Tomorrow</p>
+        <p class="todosection-completionstat">0/1</p>
+      </div>
+      <ul>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          Refill groceries
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="todosection">
+      <div class="todosection-info">
+        <p class="todosection-title">Remaining</p>
+        <p class="todosection-completionstat">0/3</p>
+      </div>
+      <ul>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          Type something
+          <p class="todo-duedate">Apr 21</p>
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          Type something
+          <p class="todo-duedate">Apr 25</p>
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox" />
+          Type something
+          <p class="todo-duedate">Apr 29</p>
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      </ul>
+    </section>
   </body>
 </html>

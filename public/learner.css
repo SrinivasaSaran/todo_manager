@@ -70,11 +70,11 @@ body {
 .todosection-todo:hover {
   background-color: gray;
 }
-
+/*
 .todo-checkbox {
   background-color: lightgray;
 }
-
+*/
 .todo-overduelabel {
   font-size: 16px;
   margin-left: 10px;
