@@ -2,6 +2,7 @@ body {
   font-family: sans-serif;
   margin: 0 auto;
   max-width: 500px;
+  background-color: lightgray;
 }
 
 .todopage-title {
@@ -23,6 +24,7 @@ body {
   padding: 5px 10px;
   border-radius: 4px;
   margin-right: 25px;
+  background-color: lightgray;
 }
 
 .todoinput-button {
@@ -65,6 +67,14 @@ body {
   padding-left: 24px;
 }
 
+.todosection-todo:hover {
+  background-color: gray;
+}
+
+.todo-checkbox {
+  background-color: lightgray;
+}
+
 .todo-overduelabel {
   font-size: 16px;
   margin-left: 10px;
@@ -76,7 +86,12 @@ body {
   margin-left: 10px;
 }
 
+.todosection-todo:hover .todo-deleteicon {
+  visibility: visible;
+}
+
 .todo-deleteicon {
+  visibility: hidden;
   margin-left: 10px;
 }
 /*Typography scale
