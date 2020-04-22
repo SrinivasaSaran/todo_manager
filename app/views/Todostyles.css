@@ -1,7 +1,7 @@
 body {
   font-family: sans-serif;
-  max-width: 500px;
   margin: 0 auto;
+  max-width: 600px;
   /*background-color: forestgreen;*/
 }
 
@@ -11,6 +11,16 @@ html {
   background-color: brown;
 }
 */
+
+.todopage {
+  display: flex;
+  align-items: center;
+  justify-content: first baseline;
+}
+
+.todocontent {
+  display: block;
+}
 
 .todopage-title {
   font-size: 48px;
@@ -38,6 +48,9 @@ html {
   padding-left: 10px;
   padding-bottom: 10px;
   margin-bottom: 24px;
+  margin-left: 10px;
+  max-width: 300px;
+  background-color: burlywood;
   /*margin-right: 100px;
   border-right-width: 10px;
   border-right-style: dotted;
