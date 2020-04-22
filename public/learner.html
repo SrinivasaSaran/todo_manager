@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Management Web App</title>
+    <link rel="stylesheet" href="../app/views/reset.css" />
+    <link rel="stylesheet" href="learner.css" />
+  </head>
+
+  <body>
+    <h1 class="todopage-title">My Todo List</h1>
+    <section class="todoinput-bar">
+      <input class="todoinput-text" type="text" value="What's Next?" />
+      <input class="todoinput-text" type="date" />
+      <input class="todoinput-button" type="button" value="Add" />
+    </section>
+    <section class="todosection">
+      <div class="todosection-info">
+        <h2 class="todosection-title">Due Today</h2>
+        <p>0/2</p>
+      </div>
+      <ul class="todosection-todo">
+        <li>
+          <input class="check-box" type="checkbox" />
+          summit saas project
+          <img
+            src="delete.png"
+            alt="delete"
+            height="24px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+        <li>
+          <input class="check-box" type="checkbox" />
+          call dog catcher
+          <img
+            src="delete.png"
+            alt="delete"
+            height="24px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      </ul>
+    </section>
+    <section class="todosection">
+      <div class="todosection-info">
+        <h2 class="todosection-title">Due Tomorrrow</h2>
+        <p>0/1</p>
+      </div>
+      <ul class="todosection-todo">
+        <li>
+          <input class="check-box" type="checkbox" />
+          Project Review
+          <img
+            src="delete.png"
+            alt="delete"
+            height="24px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
