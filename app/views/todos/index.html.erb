@@ -1,0 +1,11 @@
+<p>Hey, I'm gonna start ERB<p>
+
+<%= "#{Todo.all.to_a.join("\n")}\n\n"%>
+<%= Todo.all.map { |todo| todo.to_neat_look}.join("\n") %>
+
+<p>The ordered Todos are as follows,<p>
+<% Todo.order(:id).map{ |todo|%>
+
+<p> <%= todo.to_neat_look %> <p>
+
+<%}%>

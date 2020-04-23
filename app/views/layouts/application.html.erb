@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TodoManager</title>
+    <title>Todo Manager</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
+   <p style="background-color: purple; color: white; font-size: 36px; padding: 25px; ">
+    Todo Manager
+   </p>
+
     <%= yield %>
+
+    <p style= "font-size: 30px; background-color: purple; color: white; padding: 25px;">
+     (c) Grape Juice Inc.
+     </p>
   </body>
 </html>
