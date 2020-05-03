@@ -1,0 +1,88 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.todopage-title {
+  font-size: 38px;
+  line-height: 2;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.todoinput-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.todoinput-text {
+  border: 1px solid;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 25px;
+}
+
+.todoinput-button {
+  border: 1px solid;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid yellowgreen;
+  background-color: yellowgreen;
+}
+
+.todosection {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  margin-left: 10px;
+}
+
+.todosection-info {
+  display: flex;
+  align-items: baseline;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.todosection-title {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.todosection-completionstat {
+  margin-left: 10px;
+}
+
+.todosection-todo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1.5;
+  padding-left: 24px;
+}
+
+.todosection-todo:hover {
+  background-color: rgb(223, 47, 214);
+}
+
+.todo-duedate {
+  font-size: 14px;
+  margin-left: 10px;
+  color: rgb(110, 99, 99);
+}
+
+.todosection-todo:hover .todo-deleteicon {
+  visibility: visible;
+}
+
+.todo-deleteicon {
+  visibility: hidden;
+  margin-left: 13px;
+}
+/*Typography scale
+48px, 34px, 24px, 20px, 16px
+*/

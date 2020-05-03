@@ -1,11 +1,28 @@
-<p>Hey, I'm gonna start ERB<p>
+<article>
+    <h1 class="todopage-title">My Todo List</h1>
 
-<%= "#{Todo.all.to_a.join("\n")}\n\n"%>
-<%= Todo.all.map { |todo| todo.to_neat_look}.join("\n") %>
+    <section class="todoinput-bar">
+      <input class="todoinput-text" type="text" placeholder="What's Next?" />
+      <input class="todoinput-text" type="date" />
+      <input class="todoinput-button" type="button" value="Add" />
+    </section>
 
-<p>The ordered Todos are as follows,<p>
-<% Todo.order(:id).map{ |todo|%>
+    <%= render partial: "todo-section", locals: {
+      section_title: "Overdue",
+      todos: Todo.overdue,
+      display_date: true
+   }%>
+   <%= render partial: "todo-section", locals: {
+      section_title: "Due Today",
+      todos: Todo.due_today,
+      display_date: false
+   }%>
+   <%= render partial: "todo-section", locals: {
+      section_title: "Due Later",
+      todos: Todo.due_later,
+      display_date: true
+   }%>
 
-<p> <%= todo.to_neat_look %> <p>
 
-<%}%>
+
+</article>
