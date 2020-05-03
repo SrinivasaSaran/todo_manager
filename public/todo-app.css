@@ -71,7 +71,7 @@ body {
 
 .todo-overduelabel {
   font-size: 16px;
-  margin-left: 10px;
+  margin-left: 13px;
   color: red;
 }
 
@@ -86,7 +86,7 @@ body {
 
 .todo-deleteicon {
   visibility: hidden;
-  margin-left: 10px;
+  margin-left: 13px;
 }
 /*Typography scale
 48px, 34px, 24px, 20px, 16px
