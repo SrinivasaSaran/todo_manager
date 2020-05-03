@@ -5,23 +5,22 @@
       <%= todos.completed.count%>/<%=todos.count%>
     </p>
   </div>
-
+<%todos=todos.not_completed if display_due_text_only%>
   <ul>
-   <% todos.order(:due_date).map{ |todo|%>
-
-    <li class="todosection-todo">
-      <input class="todo-checkbox" type="checkbox" />
-      <%= todo.todo_text %>
-      <p class="todo-duedate"> <%= todo.due_date if display_date %> </p>
-      <img
-        class="todo-deleteicon"
-        src="delete.png"
-        alt="delete"
-        height="20px"
-        width="24px"
-        style="vertical-align: text-bottom;"
-      />
-    </li>
-   <%}%>
+      <% todos.order(:due_date).map{ |todo| %>
+        <li class="todosection-todo">
+          <input class="todo-checkbox" type="checkbox"/>
+          <%= todo.todo_text %>
+          <p class="todo-duedate"> <%= todo.due_date if display_date %> </p>
+          <img
+            class="todo-deleteicon"
+            src="delete.png"
+            alt="delete"
+            height="20px"
+            width="24px"
+            style="vertical-align: text-bottom;"
+          />
+        </li>
+      <%}%>
   </ul>
 </section>

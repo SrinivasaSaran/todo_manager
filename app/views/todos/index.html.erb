@@ -10,17 +10,20 @@
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",
       todos: Todo.overdue,
-      display_date: true
+      display_date: true,
+      display_due_text_only: true
    }%>
    <%= render partial: "todo-section", locals: {
       section_title: "Due Today",
       todos: Todo.due_today,
-      display_date: false
+      display_date: false,
+      display_due_text_only: false
    }%>
    <%= render partial: "todo-section", locals: {
       section_title: "Due Later",
       todos: Todo.due_later,
-      display_date: true
+      display_date: true,
+      display_due_text_only: false
    }%>
 
 
