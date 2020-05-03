@@ -24,6 +24,10 @@ class Todo < ActiveRecord::Base
     where(completed: false)
   end
 
+  def completed?
+    completed == true
+  end
+
   def self.add_task(new_task)
     create!(todo_text: new_task[:todo_text], due_date: Date.today + new_task[:due_in_days], completed: false)
   end
