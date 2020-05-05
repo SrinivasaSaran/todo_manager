@@ -1,11 +1,11 @@
 <article>
     <h1 class="todopage-title">My Todo List</h1>
 
-    <section class="todoinput-bar">
-      <input class="todoinput-text" type="text" placeholder="What's Next?" />
-      <input class="todoinput-text" type="date" />
-      <input class="todoinput-button" type="button" value="Add" />
-    </section>
+    <form class="todoinput-bar" action="/todos" method="POST">
+      <input class="todoinput-text" type="text" placeholder="What's Next?" name="todo_text" />
+      <input class="todoinput-text" type="date" name="due_date"/>
+      <input class="todoinput-button" type="submit" value="Add" />
+    </form>
 
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",
