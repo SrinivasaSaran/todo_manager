@@ -22,14 +22,17 @@
          <%= todo.todo_text %>
         </p>
         <p class="todo-duedate"> <%= todo.due_date.to_s(:short) if display_date %> </p>
-        <img
-          class="todo-deleteicon"
-          src="delete.png"
-          alt="delete"
-          height="20px"
-          width="24px"
-          style="vertical-align: text-bottom;"
-        />
+        <%= form_with(url: "todos/#{todo.id}", method: "delete") do %>
+            <input
+              class="todo-deleteicon"
+              type="image"
+              src="delete.png"
+              alt="delete"
+              height="20px"
+              width="24px"
+              style="vertical-align: text-bottom;"
+            />
+          <%end%>
       </li>
     <%}%>
   </ul>
