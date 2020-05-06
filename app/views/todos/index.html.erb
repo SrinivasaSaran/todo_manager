@@ -1,15 +1,16 @@
 <article>
+
     <h1 class="todopage-title">My Todo List</h1>
 
-    <form class="todoinput-bar" action="/todos" method="POST">
+    <%= form_with(class: "todoinput-bar", url: "/todos", method: "POST") do %>
       <input class="todoinput-text" type="text" placeholder="What's Next?" name="todo_text" />
       <input class="todoinput-text" type="date" name="due_date"/>
       <input class="todoinput-button" type="submit" value="Add" />
-    </form>
+    <%end%>
 
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",
-      todos: Todo.overdue,
+      todos: Todo.overdue.not_completed,
       display_date: true,
       display_due_text_only: true
    }%>
@@ -25,7 +26,5 @@
       display_date: true,
       display_due_text_only: false
    }%>
-
-
 
 </article>

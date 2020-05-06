@@ -5,7 +5,6 @@
       <%= todos.completed.count%>/<%=todos.count%>
     </p>
   </div>
-<%todos=todos.not_completed if display_due_text_only%>
   <ul>
     <% todos.order(:due_date).map{ |todo| %>
       <li class="todosection-todo">

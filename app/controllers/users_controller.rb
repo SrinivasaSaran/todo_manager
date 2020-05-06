@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token
 
   def index
     render plain: "User Details:\n\n#{User.order(:id).map { |user| user.to_neat_look }.join("\n\n")}"
