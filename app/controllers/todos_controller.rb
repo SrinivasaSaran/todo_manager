@@ -1,12 +1,10 @@
 class TodosController < ApplicationController
-
   def index
-    render "index"
   end
 
   def show
-    id = params[:id]
-    render "show"
+    @id = params[:id]
+    @todo = Todo.find(@id)
   end
 
   def create

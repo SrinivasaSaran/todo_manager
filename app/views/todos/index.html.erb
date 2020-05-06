@@ -3,28 +3,25 @@
     <h1 class="todopage-title">My Todo List</h1>
 
     <%= form_with(class: "todoinput-bar", url: "/todos", method: "POST") do %>
-      <input class="todoinput-text" type="text" placeholder="What's Next?" name="todo_text" />
-      <input class="todoinput-text" type="date" name="due_date"/>
-      <input class="todoinput-button" type="submit" value="Add" />
+      <%= text_field_tag :todo_text, nil, placeholder: "What's Next?", class: "todoinput-text" %>
+      <%= date_field_tag :due_date, nil, class: "todoinput-text" %>
+      <%= submit_tag :Add, class: "todoinput-button", data: { disable_with: "Adding..."} %>
     <%end%>
 
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",
       todos: Todo.overdue.not_completed,
       display_date: true,
-      display_due_text_only: true
    }%>
    <%= render partial: "todo-section", locals: {
       section_title: "Due Today",
       todos: Todo.due_today,
       display_date: false,
-      display_due_text_only: false
    }%>
    <%= render partial: "todo-section", locals: {
       section_title: "Due Later",
       todos: Todo.due_later,
       display_date: true,
-      display_due_text_only: false
    }%>
 
 </article>

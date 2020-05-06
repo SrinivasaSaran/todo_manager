@@ -1,1 +1,4 @@
-<%= Todo.find(params[:id])%>
+<div style= "font-size: 24px; margin: 40px; display: flex">
+  The Todo with ID: <%=@id%> is
+  <p style="text-decoration: underline; margin-left: 10px"><%=@todo.todo_text%></p>
+</div>
