@@ -1,0 +1,20 @@
+<h1 class="todopage-title">Todo Manager</h1>
+<%= form_with(url: "users/login", method: "post") do %>
+    <label class="signup-label" for="email" >E-mail:</label><br>
+    <%= email_field_tag :email,
+                        nil,
+                        placeholder: "Your Registered e-mail Id",
+                        pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",
+                        title: "Expected Input pattern: xxx@xxx.xx",
+                        class: "signup-inputbar"
+    %><br><br>
+    <label class="signup-label" for="password_digest" >Password:</label><br>
+    <%= password_field_tag :password_digest,
+                           nil,
+                           placeholder: "Your Password Please!",
+                           pattern: ".{6,12}",
+                           title: "6 to 12 characters",
+                           class: "signup-inputbar"
+    %><br><br>
+    <%= submit_tag "SIGN IN", data: {disable_with: "verifying...."}, class: "signup-button" %>
+<%end%>

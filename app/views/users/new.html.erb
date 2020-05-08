@@ -1,0 +1,41 @@
+<h1 class="todopage-title">Todo Manager </h1>
+<%= form_with(url: "users", method: "post") do %>
+    <label class="signup-label" for="username" >Username:</label><br>
+    <%= text_field_tag :username,
+                       nil,
+                       placeholder: "How you want to be called?",
+                       pattern: ".{2,}",
+                       class: "signup-inputbar"
+    %><br><br>
+    <label class="signup-label" for="first_name" >First Name:</label><br>
+    <%= text_field_tag :first_name,
+                       nil,
+                       placeholder: "First Name",
+                       pattern: ".{1,}",
+                       class: "signup-inputbar"
+    %><br><br>
+    <label class="signup-label" for="last_name" >Last Name:</label><br>
+    <%= text_field_tag :last_name,
+                       nil,
+                       placeholder: "Last Name (not mandatory)",
+                       pattern: ".{1,}",
+                       class: "signup-inputbar"
+    %><br><br>
+    <label class="signup-label" for="email" >E-mail:</label><br>
+    <%= email_field_tag :email,
+                        nil,
+                        placeholder: "Your valid e-mail Id",
+                        pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",
+                        title: "Expected Input pattern: xxx@xxx.xx",
+                        class: "signup-inputbar"
+    %><br><br>
+    <label class="signup-label" for="password_digest" >Password:</label><br>
+    <%= password_field_tag :password_digest,
+                           nil,
+                           placeholder: "Make your Password",
+                           pattern: ".{6,12}",
+                           title: "6 to 12 characters",
+                           class: "signup-inputbar"
+    %><br><br>
+    <%= submit_tag "SIGN UP", data: {disable_with: "Creating...."}, class: "signup-button" %>
+<%end%>
