@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   #post "todos", to: "todos#create"
   #get "todos/:id", to: "todos#show"
 
+  get "users/passworderror", to: "users#passworderror"
   resources :todos
   resources :users
   post "users/login", to: "users#login"
   get "/" => "home#index"
+  get "users/passworderror", to: "users#passworderror"
 end

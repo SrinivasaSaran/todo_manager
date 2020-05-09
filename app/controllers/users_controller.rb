@@ -6,19 +6,28 @@ class UsersController < ApplicationController
   def new
   end
 
-  def show
-    render plain: "#{User.find(params[:id]).to_neat_look}"
+  def passworderror
   end
 
   def create
-    User.create!(
-      username: params[:username],
-      first_name: params[:first_name],
-      last_name: params[:last_name],
-      email: params[:email],
-      password_digest: params[:password_digest],
-    )
-    render plain: "Yay;)\nWelcome #{params[:name].upcase}. you are now signed up! You can now enjoy our Service"
+    if !(params[:password_digest] == params[:password_confirmation_digest])
+      redirect_to "/users/passworderror"
+    else
+      User.create!(
+        username: params[:username],
+        first_name: params[:first_name],
+        last_name: params[:last_name],
+        email: params[:email],
+        password: params[:password_digest],
+        password_confirmation: params[:password_confirmation_digest],
+      )
+      redirect_to "/users"
+      #render plain: "Yay;)\nWelcome #{params[:name].upcase}. you are now signed up! You can now enjoy our Service"
+    end
+  end
+
+  def show
+    render plain: "#{User.find(params[:id]).to_neat_look}"
   end
 
   def login
