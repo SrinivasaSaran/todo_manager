@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :users
   post "users/login", to: "users#login"
   get "/" => "home#index"
-  get "users/passworderror", to: "users#passworderror"
+  get "/signin", to: "sessions#new", as: "new_sessions"
+  post "/signin" => "sessions#create", as: "sessions"
 end

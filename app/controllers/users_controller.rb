@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         password: params[:password_digest],
         password_confirmation: params[:password_confirmation_digest],
       )
-      redirect_to "/users"
+      redirect_to "/signin"
       #render plain: "Yay;)\nWelcome #{params[:name].upcase}. you are now signed up! You can now enjoy our Service"
     end
   end
