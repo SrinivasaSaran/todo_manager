@@ -1,5 +1,5 @@
 <article>
-  <h1 class="todopage-title">Todo Manager</h1>
+  <h1 class="signingpage-title">Todo Manager</h1>
   <%= form_with(url: sessions_path, method: "post") do %>
       <label class="signup-label" for="email" >E-mail:</label><br>
       <%= email_field_tag :email,
@@ -19,5 +19,6 @@
       %><br><br>
       <%= submit_tag "SIGN IN", data: {disable_with: "verifying...."}, class: "signup-button" %>
   <%end%>
+  <br><br>
   <p class="signup-label">New User? -> <%= link_to "SIGN UP", new_user_path %></p>
 </article>

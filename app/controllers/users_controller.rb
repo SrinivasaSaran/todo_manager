@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :ensure_user_logged_in, only: [:new, :create, :passworderror]
+
   def index
     #render plain: "User Details:\n\n#{User.order(:id).map { |user| user.to_neat_look }.join("\n\n")}"
   end
@@ -30,6 +32,7 @@ class UsersController < ApplicationController
     render plain: "#{User.find(params[:id]).to_neat_look}"
   end
 
+=begin
   def login
     login = User.where(
       "email = ? and password_digest = ?",
@@ -41,4 +44,5 @@ class UsersController < ApplicationController
     redirect_to users_path if login == 1
     redirect_to new_user_path if login == 0
   end
+=end
 end

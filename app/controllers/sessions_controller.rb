@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :ensure_user_logged_in
+  skip_before_action :ensure_user_logged_in, except: [:destroy]
 
   def create
     user = User.find_by(email: params[:email])
@@ -12,5 +12,11 @@ class SessionsController < ApplicationController
   end
 
   def new
+  end
+
+  def destroy
+    session[:current_user_id] = nil
+    @current_user = nil
+    redirect_to "/"
   end
 end

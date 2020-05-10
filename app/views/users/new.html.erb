@@ -1,5 +1,5 @@
 <article>
-<h1 class="todopage-title">Todo Manager </h1>
+<h1 class="signingpage-title">Todo Manager </h1>
 <%= form_with(url: "/users", method: "post") do %>
     <label class="signup-label" for="username" >Username:</label><br>
     <%= text_field_tag :username,
@@ -48,5 +48,6 @@
     %><br><br>
     <%= submit_tag "SIGN UP", data: {disable_with: "Creating...."}, class: "signup-button" %>
 <%end%>
+  <br><br>
 <p class="signup-label">Already Signed Up? -> <%= link_to "SIGN IN", new_user_path %></p>
 </article>

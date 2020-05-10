@@ -1,14 +1,16 @@
 <article>
+
    <% content_for :todopageheader do %>
       <header class="todopage-header">
          <h1 class="todopage-title">My Todo List</h1>
-         <%= form_with(class: "additional-header") do %>
+         <%= form_with( url: "/signout", method: "DELETE", class: "additional-header") do %>
             <p class="user-name"><%= @user.username %></p>
-            <%=  submit_tag "Sign Out", class: "signout-button", data: {disable_with: "Bye..."}%>
+            <%= submit_tag "Sign Out", class: "signout-button", data: {disable_with: "Bye..."}%>
          <% end %>
          <hr>
       </header>
    <% end %>
+
     <%= form_with(class: "todoinput-bar", url: "/todos", method: "POST") do %>
       <%= text_field_tag :todo_text, nil, placeholder: "What's Next?", class: "todoinput-text" %>
       <%= date_field_tag :due_date, nil, class: "todoinput-text" %>
