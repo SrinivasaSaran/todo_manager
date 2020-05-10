@@ -4,12 +4,36 @@ body {
   max-width: 600px;
 }
 
+.todopage-header {
+  margin-bottom: 60px;
+}
+
 .todopage-title {
   font-size: 38px;
   line-height: 2;
-  margin-bottom: 20px;
   margin-top: 20px;
   text-align: center;
+}
+
+.additional-header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 18px;
+  color: rgb(37, 39, 39);
+}
+
+.signout-button {
+  margin-left: 20px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid tomato;
+  background-color: tomato;
 }
 
 .todoinput-bar {
@@ -26,7 +50,6 @@ body {
 }
 
 .todoinput-button {
-  border: 1px solid;
   padding: 5px 15px;
   border-radius: 4px;
   color: white;
