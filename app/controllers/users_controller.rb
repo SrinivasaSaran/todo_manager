@@ -1,9 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :ensure_user_logged_in, only: [:new, :create, :passworderror]
-
-  def index
-    #render plain: "User Details:\n\n#{User.order(:id).map { |user| user.to_neat_look }.join("\n\n")}"
-  end
+  skip_before_action :ensure_user_logged_in
 
   def new
   end
@@ -15,7 +11,7 @@ class UsersController < ApplicationController
     if !(params[:password_digest] == params[:password_confirmation_digest])
       redirect_to "/users/passworderror"
     else
-      User.create!(
+      user = User.create!(
         username: params[:username],
         first_name: params[:first_name],
         last_name: params[:last_name],
@@ -23,26 +19,8 @@ class UsersController < ApplicationController
         password: params[:password_digest],
         password_confirmation: params[:password_confirmation_digest],
       )
-      redirect_to "/signin"
-      #render plain: "Yay;)\nWelcome #{params[:name].upcase}. you are now signed up! You can now enjoy our Service"
+      session[:current_user_id] = user.id
+      redirect_to "/"
     end
   end
-
-  def show
-    render plain: "#{User.find(params[:id]).to_neat_look}"
-  end
-
-=begin
-  def login
-    login = User.where(
-      "email = ? and password_digest = ?",
-      params[:email],
-      params[:password_digest]
-    ).length
-    #render plain: "False" if login == 0
-    #render plain: "True" if login == 1
-    redirect_to users_path if login == 1
-    redirect_to new_user_path if login == 0
-  end
-=end
 end
