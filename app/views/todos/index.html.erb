@@ -5,9 +5,6 @@
          <h1 class="todopage-title">My Todo List</h1>
          <div class="additional-header">
             <p class="user-name"><%= @user.username %></p>
-            <%= form_with( url: "/users/#{@user.id}/edit", method: "GET") do %>
-               <%= submit_tag "Edit Profile", class: "edit-button", data: {disable_with: "Processing..."}%>
-            <% end %>
             <%= form_with( url: "/signout", method: "DELETE") do %>
                <%= submit_tag "Sign Out", class: "signout-button", data: {disable_with: "Bye..."}%>
             <% end %>
