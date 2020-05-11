@@ -4,12 +4,9 @@ class UsersController < ApplicationController
   def new
   end
 
-  def passworderror
-  end
-
   def create
     if !(params[:password_digest] == params[:password_confirmation_digest])
-      redirect_to "/users/passworderror"
+      redirect_to "/users/new", error: "Password Mismatch.\n You must enter same content in both password fields"
     else
       user = User.create!(
         username: params[:username],

@@ -46,6 +46,9 @@
                            title: "6 to 12 characters",
                            class: "signup-inputbar"
     %><br><br>
+    <% if flash[:error] %>
+        <p class="flash-error"> <%= flash[:error] %> </p>
+      <% end %>
     <%= submit_tag "SIGN UP", data: {disable_with: "Creating...."}, class: "signup-button" %>
 <%end%>
   <br><br>

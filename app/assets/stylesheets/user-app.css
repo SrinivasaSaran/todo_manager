@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+.flash-error {
+  color: red;
+  margin: 20px auto;
+}
+
 .signup-label {
 }
 
@@ -29,9 +34,4 @@
 .signup-button:hover {
   border: 1px solid rgb(99, 21, 245);
   background-color: rgb(36, 21, 245);
-}
-
-.passworderror-msg {
-  font-size: 26px;
-  margin-top: 40px;
 }
