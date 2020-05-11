@@ -6,6 +6,7 @@
                        nil,
                        placeholder: "How you want to be called?",
                        pattern: ".{2,}",
+                       title: "Minimum 2 chars",
                        class: "signup-inputbar"
     %><br><br>
     <label class="signup-label" for="first_name" >First Name:</label><br>
@@ -13,13 +14,13 @@
                        nil,
                        placeholder: "First Name",
                        pattern: ".{1,}",
+                       title: "Minimum 1 char",
                        class: "signup-inputbar"
     %><br><br>
     <label class="signup-label" for="last_name" >Last Name:</label><br>
     <%= text_field_tag :last_name,
                        nil,
                        placeholder: "Last Name (not mandatory)",
-                       pattern: ".{1,}",
                        class: "signup-inputbar"
     %><br><br>
     <label class="signup-label" for="email" >E-mail:</label><br>
@@ -27,7 +28,7 @@
                         nil,
                         placeholder: "Your valid e-mail Id",
                         pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$",
-                        title: "Expected Input pattern: xxx@xxx.xx",
+                        title: "Expected Pattern: yyy@yyy.yy",
                         class: "signup-inputbar"
     %><br><br>
     <label class="signup-label" for="password_digest" >Password:</label><br>
@@ -46,9 +47,8 @@
                            title: "6 to 12 characters",
                            class: "signup-inputbar"
     %><br><br>
-    <% if flash[:error] %>
-        <p class="flash-error"> <%= flash[:error] %> </p>
-      <% end %>
+    <p class="flash-error"> <%= flash[:error] %> </p>
+    <p class="flash-error"> <%= flash[:invalid] %> </p>
     <%= submit_tag "SIGN UP", data: {disable_with: "Creating...."}, class: "signup-button" %>
 <%end%>
   <br><br>

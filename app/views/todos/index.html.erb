@@ -12,10 +12,12 @@
    <% end %>
 
     <%= form_with(class: "todoinput-bar", url: "/todos", method: "POST") do %>
-      <%= text_field_tag :todo_text, nil, placeholder: "What's Next?", class: "todoinput-text" %>
+      <%= text_field_tag :todo_text, nil, placeholder: "What's Next?", pattern: ".{2,}",title: "Todo entry needs minimun 2 characters", class: "todoinput-text" %>
       <%= date_field_tag :due_date, nil, class: "todoinput-text" %>
       <%= submit_tag :Add, class: "todoinput-button", data: { disable_with: "Adding..."} %>
     <%end%>
+
+    <p class="flash-error"> <%= flash[:error] %> </p>
 
     <%= render partial: "todo-section", locals: {
       section_title: "Overdue",

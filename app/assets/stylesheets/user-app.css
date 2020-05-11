@@ -7,11 +7,9 @@
 }
 
 .flash-error {
+  font-size: 16px;
   color: red;
   margin: 20px auto;
-}
-
-.signup-label {
 }
 
 .signup-inputbar {
