@@ -3,10 +3,15 @@
    <% content_for :todopageheader do %>
       <header class="todopage-header">
          <h1 class="todopage-title">My Todo List</h1>
-         <%= form_with( url: "/signout", method: "DELETE", class: "additional-header") do %>
+         <div class="additional-header">
             <p class="user-name"><%= @user.username %></p>
-            <%= submit_tag "Sign Out", class: "signout-button", data: {disable_with: "Bye..."}%>
-         <% end %>
+            <%= form_with( url: "/users/#{@user.id}/edit", method: "GET") do %>
+               <%= submit_tag "Edit Profile", class: "edit-button", data: {disable_with: "Processing..."}%>
+            <% end %>
+            <%= form_with( url: "/signout", method: "DELETE") do %>
+               <%= submit_tag "Sign Out", class: "signout-button", data: {disable_with: "Bye..."}%>
+            <% end %>
+         </div>
          <hr>
       </header>
    <% end %>

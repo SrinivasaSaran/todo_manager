@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :ensure_user_logged_in
+  skip_before_action :ensure_user_logged_in, only: [:new, :create]
 
   def new
   end
@@ -24,5 +24,10 @@ class UsersController < ApplicationController
         redirect_to new_user_path
       end
     end
+  end
+
+  def edit
+    @user = current_user
+    render :edit
   end
 end

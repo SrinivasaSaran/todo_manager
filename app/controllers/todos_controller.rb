@@ -23,11 +23,8 @@ class TodosController < ApplicationController
   def update
     todo = current_user.todos.find(params[:id])
     todo.completed = params[:completed]
-    if todo.save
-      redirect_to todos_path
-    else
-      redirect_to edit_todo_path, error: todo.errors.full_messages.join(" , ")
-    end
+    todo.save
+    redirect_to todos_path
   end
 
   def destroy

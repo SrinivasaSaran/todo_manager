@@ -27,6 +27,15 @@ body {
   color: rgb(37, 39, 39);
 }
 
+.edit-button {
+  margin-left: 20px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid slateblue;
+  background-color: slateblue;
+}
+
 .signout-button {
   margin-left: 20px;
   padding: 5px 15px;

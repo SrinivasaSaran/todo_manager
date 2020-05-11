@@ -1,6 +1,6 @@
 <article>
 <h1 class="signingpage-title">Todo Manager </h1>
-<%= form_with(url: "/users", method: "post") do %>
+<%= form_with(url: "/users/#{@user.id}", method: "post") do %>
     <label class="signup-label" for="username" >Username:</label><br>
     <%= text_field_tag :username,
                        nil,
@@ -31,26 +31,7 @@
                         title: "Expected Pattern: yyy@yyy.yy",
                         class: "signup-inputbar"
     %><br><br>
-    <label class="signup-label" for="password_digest" >Password:</label><br>
-    <%= password_field_tag :password_digest,
-                           nil,
-                           placeholder: "Make your Password",
-                           pattern: ".{6,12}",
-                           title: "6 to 12 characters",
-                           class: "signup-inputbar"
-    %><br><br>
-    <label class="signup-label" for="password_confirmation_digest" >Confirm Password:</label><br>
-    <%= password_field_tag :password_confirmation_digest,
-                           nil,
-                           placeholder: "ReEnter your Password",
-                           pattern: ".{6,12}",
-                           title: "6 to 12 characters",
-                           class: "signup-inputbar"
-    %><br><br>
     <p class="flash-error"> <%= flash[:error] %> </p>
     <p class="flash-error"> <%= flash[:invalid] %> </p>
-    <%= submit_tag "SIGN UP", data: {disable_with: "Creating...."}, class: "signup-button" %>
+    <%= submit_tag "Update", data: {disable_with: "Updating...."}, class: "signup-button" %>
 <%end%>
-  <br><br>
-<p class="signup-label">Already Signed Up? -> <%= link_to "SIGN IN", new_sessions_path %></p>
-</article>
