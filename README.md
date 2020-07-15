@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a guided Project as it is my first project on web development using Ruby on Rails. 
+Here we can add and delete a todo. Also we can update the status of the todo as pending or completed.
+It sorts the todos as Overdue, Due Today and Due Later depending on the deadline of a particular Todo.
